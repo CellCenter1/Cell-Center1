@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Navegación</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.bar {
+  background-color: hsl(208, 100%, 46%);
+  overflow: hidden;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+
+.bar li {
+  flex: 1;
+}
+
+.bar li a {
+  display: block;
+  color: rgb(8, 2, 2);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.bar li a:hover {
+  background-color: #ffffff;
+}
+
+.bar li a.active {
+  background-color: #0763d2;
+  color: black;
+}
+
+/* Animaciones */
+.bar li a {
+  position: relative;
+}
+
+.bar li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.bar li a:hover::before,
+.bar li a:focus::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul class="bar">
+      <li><a href="Quienesomos.HTM" class="active" target="contenido">Quienes somos</a></li>
+      <li><a href="Celulares.Htm" target="contenido">Celulares</a></li>
+      <li><a href="Productos.htm" target="contenido">Cobertores</a></li>
+      <li><a href="MasProductos.HTM" target="contenido">Mas Productos</a></li>
+      <li><a href="Servicios.htm" target="contenido">Servicios</a></li>
+      <li><a href="Ubicacion.html" target="contenido">Ubicacion</a></li>
+      <li><a href="Contactos.HTM" target="contenido">Contacto</a></li>
+    </ul>
+  </div>
+</body>

@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+}
+.block span{
+  font-family: "Spartan";
+  position: fixed;
+  font-size:105px;
+  top:100%;
+  left:100%;
+  transform: translate(-50% ,-50%);
+  color:hsl(0, 4%, 23%);
+  width:100%;
+  text-align:center;
+}
+.block {
+	position: relative;
+	margin: 250px auto 0;
+	width: 1200px;
+	height: 700px;
+    color: #fff;
+	background: linear-gradient(0deg, #1d1e22, #42444d);
+}
+  .block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #a75050, #0077ff, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 500%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: glow 50s linear infinite;
+  }
+  .block:after {
+    filter: blur(80px);
+  }
+  @keyframes glow {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 500% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
